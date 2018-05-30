@@ -14,7 +14,9 @@ echo ${CLIENT_ID}
 if [ -z "${CLIENT_ID}" ]; then
     echo "Using admin credentials"
     alias om_cmd='om ${skip_ssl_flag} --target "${OPSMAN_URL}" --client-id "${CLIENT_ID}" --client-secret "${CLIENT_SECRET}"'
+    echo $om_cmd
 else
     echo "Using Client-id"
     alias om_cmd='om ${skip_ssl_flag} --target "${OPSMAN_URL}" --username "${OPSMAN_USERNAME}" --password "${OPSMAN_PASSWORD}"'
+    echo $om_cmd
 fi
